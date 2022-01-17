@@ -1,6 +1,8 @@
 ---
-YAML tags:
-- copy-paste the tags obtained with the online tagging app: https://huggingface.co/spaces/huggingface/datasets-tagging
+languages:
+- en-US
+multilinguality:
+- monolingual
 ---
 
 # Dataset Card for FUNSD-vu2020revising
@@ -32,91 +34,96 @@ YAML tags:
 
 ## Dataset Description
 
-- **Homepage:**
-- **Repository:**
-- **Paper:**
-- **Leaderboard:**
-- **Point of Contact:**
+- **Paper:** [https://arxiv.org/abs/2010.05322](https://arxiv.org/abs/2010.05322)
 
 ### Dataset Summary
 
-[More Information Needed]
+This is the revised version of the [FUNSD dataset](https://huggingface.co/datasets/nielsr/funsd) as proposed by [Vu, H. M., & Nguyen, D. T. N. (2020)](https://arxiv.org/abs/2010.05322).
 
 ### Supported Tasks and Leaderboards
 
-[More Information Needed]
-
-### Languages
-
-[More Information Needed]
+The Form Understanding challenge comprises three tasks, namely word grouping, semantic-entity labeling, and entity linking.
 
 ## Dataset Structure
 
 ### Data Instances
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Data Fields
 
-[More Information Needed]
+The data fields are the same among all splits.
+
+- `id`: a `string` feature - GUID.
+- `words`: a `list` of `string` features.
+- `bboxes`: a `list` of `list` with four (`int`) features.
+- `ner_tags`: a `list` of classification labels (`int`). Full tagset with indices:
+
+```python
+{'O': 0, 'B-HEADER': 1, 'I-HEADER': 2, 'B-QUESTION': 3, 'I-QUESTION': 4, 'B-ANSWER': 5, 'I-ANSWER': 6}
+```
+
+- `image_path`: a `string` feature.
 
 ### Data Splits
 
-[More Information Needed]
+|  name      |train|test|
+|------------|----:|---:|
+|FUNSD-vu2020|  149|  50|
 
 ## Dataset Creation
 
 ### Curation Rationale
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Source Data
 
 #### Initial Data Collection and Normalization
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 #### Who are the source language producers?
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Annotations
 
 #### Annotation process
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 #### Who are the annotators?
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Personal and Sensitive Information
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Considerations for Using the Data
 
 ### Social Impact of Dataset
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Discussion of Biases
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Other Known Limitations
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ## Additional Information
 
 ### Dataset Curators
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Licensing Information
 
-[More Information Needed]
+[More Information Needed](https://github.com/huggingface/datasets/blob/master/CONTRIBUTING.md#how-to-contribute-to-the-dataset-cards)
 
 ### Citation Information
 
